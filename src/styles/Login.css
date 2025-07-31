@@ -1,0 +1,103 @@
+/* src/styles/Login.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #f3f4f6, #dbeafe);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.login-container h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.login-container p {
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.login-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2563eb;
+}
+
+.login-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.success {
+  color: #065f46;
+  background-color: #d1fae5;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.google-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-button:hover {
+  background-color: #c23321;
+}
+
+.google-button:disabled,
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

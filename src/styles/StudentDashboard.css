@@ -1,0 +1,72 @@
+.student-dashboard {
+  padding: 2rem;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+}
+
+.student-form-box {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.student-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.student-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.student-form button:hover {
+  background-color: #2563eb;
+}
+
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #4b5563;
+}
