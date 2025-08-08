@@ -12,12 +12,6 @@ pipeline {
                 git url: 'https://github.com/nayangchawhan/BrainBell.git', branch: 'main'
             }
         }
-
-        stage('Build') {
-            steps {
-                sh 'git config remote.origin.url https://github.com/nayangchawhan/BrainBell.git'
-            }
-        }
     }
 
     stage('Build Docker Image') {
