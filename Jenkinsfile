@@ -7,17 +7,17 @@ pipeline {
   }
 
   stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/nayangchawhan/BrainBell.git', branch: 'main'
-            }
-        }
+
+    stage('Checkout') {
+      steps {
+        git url: 'https://github.com/nayangchawhan/BrainBell.git', branch: 'main'
+      }
     }
 
     stage('Build Docker Image') {
       steps {
         script {
-          sh 'docker build -t $IMAGE_NAME .'
+          sh "docker build -t $IMAGE_NAME ."
         }
       }
     }
@@ -26,9 +26,9 @@ pipeline {
       steps {
         script {
           sh """
-            if [ \$(docker ps -q -f name=$CONTAINER_NAME) ]; then
-              docker stop $CONTAINER_NAME
-              docker rm $CONTAINER_NAME
+            if [ \$(docker ps -a -q -f name=$CONTAINER_NAME) ]; then
+              docker stop $CONTAINER_NAME || true
+              docker rm $CONTAINER_NAME || true
             fi
           """
         }
