@@ -8,11 +8,13 @@ pipeline {
 
   stages {
 
-    stage('Checkout') {
-      steps {
-        git url: 'https://github.com/nayangchawhan/BrainBell.git', branch: 'main'
-      }
-    }
+   stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM',
+                          branches: [[name: '*/main']], // or master
+                          userRemoteConfigs: [[url: 'https://github.com/nayangchawhan/BrainBell.git']]
+                ])
+            }
 
     stage('Build Docker Image') {
       steps {
